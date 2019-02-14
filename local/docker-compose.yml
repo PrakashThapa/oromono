@@ -1,7 +1,7 @@
 data:
   image: djocker/orodata
 db:
-  image: mysql:5.5
+  image: mysql:5.7
   expose:
     - "3306"
   environment:
@@ -19,7 +19,7 @@ mail:
     - maildomain=localhost
     - smtp_user=user@localhost:password
 minion:
-  image: djocker/oromono
+  image: phpprakash/oromono
   links:
     - "db"
     - "mail"
