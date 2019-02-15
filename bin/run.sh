@@ -13,6 +13,7 @@ VOLUMES[1]="/var/www/web/uploads";
 VOLUMES[2]="/var/www/web/media";
 VOLUMES[3]="/var/www/app/attachment";
 VOLUMES[4]="/var/www/app/import_export";
+VOLUMES[5]="/var/www/";
 
 for i in ${!VOLUMES[*]}; do 
   if [[ `stat -c '%u:%g' ${VOLUMES[$i]}` != `getent passwd | grep www-data | awk -F ':' '{print $3 ":" $4}'` ]]; then
