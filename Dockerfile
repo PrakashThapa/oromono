@@ -1,4 +1,4 @@
-FROM phpprakash/orobase:latest
+FROM phpprakash/orobase:7.2
 
 COPY bin/run.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/run.sh
